@@ -209,8 +209,26 @@ string descLightSaber(string &color){
 	 return "orden 66";
  }
 }
+int start(){
+int numero;
+cout << "¡Bienvenidos a nuestro programa de encuestas sobre el color de lightsaber!\n\n"
 
+"Si eres fanático de Star Wars, seguramente te has preguntado cuál sería tu color de lightsaber si tuvieras la habilidad de usar la Fuerza.\n ¡Ahora puedes averiguarlo con nuestro programa!\n\n"
+
+"Nuestro programa te hará una serie de preguntas para conocer tus gustos y personalidad,\n y con base en tus respuestas, te asignará un color de lightsaber que se relaciona con tu forma de ser.\n ¿Serás un maestro Jedi con un lightsaber verde, o un guerrero Sith con uno rojo? ¡Descúbrelo ahora!\n\n"
+
+"Además, nuestro programa te ofrecerá información interesante sobre el significado de cada color de lightsaber\n y cómo se relaciona con la personalidad y los gustos de las personas.\n ¡Es una forma divertida de conocerte mejor y de compartir tus resultados con tus amigos!\n"
+"¡Anímate a participar en nuestra encuesta y descubre tu verdadero color de lightsaber!\n" <<endl;
+
+cout << "Pulsa 1 para empezar" << endl;
+cin >> numero;
+return numero;
+
+}
 int main() {
+	int starts;
+  starts = start();
+ if(starts == 1){
  VectorPEL<LightSaber> starWars;
  int caso;
  bool continuar = true;
@@ -255,6 +273,7 @@ int main() {
 	   cout << "Introduce el nombre del padwan"<<endl;
 	   cin>>name;
 
+
 	   for (int i = 0; i < num; ++i){
 	       LightSaber nombre = *starWars.now(i);
          if(nombre.username == name){
@@ -280,4 +299,7 @@ int main() {
 	 break;
 	 }
  };
+ }else{
+	 cout << "---THE END---" << endl;
+ }
 }
